@@ -1,0 +1,69 @@
+.radial-nav {
+    position:relative;  /* makees this the 'reference" point of any further div's that are cposition:absolutes. It absolutly relies on this relative to do what it needs */
+   width: 200px; /* width of the radial nav */
+   height: 200px; /* height of the radial nav */
+   margin: 100px auto;/* centers the radial nav in the middle of the page and automatically adds space on top */
+   border-radius: 50%; /* makes the div a circle */
+}
+
+.choose-your-choas{
+    /* layout styles */
+    margin: -30px;                          /* moves the div up by half its own height to center it vertically */
+    padding:30px 10px;                      /* adds padding to the text div */
+    position: absolute;                     /* makes this div absolute to the radial nav div */
+    display: flex;                         /* makes this div a flex container */
+    justify-content: center;               /* centers the text inside this div horizontally */
+    align-items: center;                  /* centers the text inside this div vertically */
+    top: 50%;                               /* moves the div down 50% of the height of the radial nav */
+    left: 50%;                              /* moves the div right 50% of the width of the radial nav */
+    width:140px;                            /* width of the text div */
+    height: 140px;                          /* height of the text div */
+
+
+    /* Text styles */
+    text-align: center;                     /* centers the text inside this div */
+    font-size: 2rem;                        /* sets the font size of the text inside this div */
+    line-height: 60px;                      /* sets the line height of the text inside the div "choose-your-chaos found in index.html */
+
+    /*  colors */
+    background-color: rgba(0, 0, 0, 0.5); /* sets the background color to black with 50% opacity */
+    color: white;                          /* sets the text color to white */
+    
+
+    /* border styles */
+    transform: translate(-50%, -50%);       /* moves the div back up and left by half its own size to center it in the middle of the radial nav */
+    border-radius: 50%;                     /* makes the div a circle */
+    box-shadow: 0 0 10px rgba(108, 105, 105, 0.5); /* adds a shadow to the div */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* adds a border to the text div with 50% opacity */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
