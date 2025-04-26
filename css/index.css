@@ -1,9 +1,31 @@
+:root {
+    /* Defining color variables */
+    --blue: #1E90FF; /* Bright blue */
+    --navy-blue: #000080; /* Navy blue */
+    --byui-blue: #003F87; /* BYU-Idaho blue (adjust the shade if needed) */
+    --white: #FFFFFF; /* White */
+}
+
+body{
+    font-family: arial, san-serif;
+    background-color: var(--byui-blue); /* sets the background color to BYU-Idaho blue */
+    color: var(--white); /* sets the text color to white */
+}
+
+h1{
+    color: (var(--byui-blue))
+}
+
 .radial-nav {
-    position:relative;  /* makees this the 'reference" point of any further div's that are cposition:absolutes. It absolutly relies on this relative to do what it needs */
+   position:relative;  /* makees this the 'reference" point of any further div's that are cposition:absolutes. It absolutly relies on this relative to do what it needs */
    width: 200px; /* width of the radial nav */
    height: 200px; /* height of the radial nav */
    margin: 100px auto;/* centers the radial nav in the middle of the page and automatically adds space on top */
    border-radius: 50%; /* makes the div a circle */
+   background-color:var(--byui-blue) ;
+   box-shadow: 0 0 10px rgba(108, 105, 105, 0.5); /* adds a shadow to the div */
+
+
 }
 
 .choose-your-choas{
@@ -36,9 +58,72 @@
     box-shadow: 0 0 10px rgba(108, 105, 105, 0.5); /* adds a shadow to the div */
     border: 2px solid rgba(255, 255, 255, 0.5); /* adds a border to the text div with 50% opacity */
 
+
+}
+/* styles for the radial nav links */
+.radial-nav a {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    color: var(--byui-blue); /* Set link text color to BYUI blue */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+/* styles for the radial nav links on hover */
+.radial-nav a:hover {
+    transform: scale(1.2); /* scales the link up on hover */
+    color: var(--white); /* changes the link text color to white on hover */
+}
+/* styles for the radial nav links on active */
+.radial-nav a:active {
+    transform: scale(0.9); /* scales the link down on active */
+    color: var(--white); /* changes the link text color to white on active */
+}
+/* styles for the radial nav links on focus */  
+.radial-nav a:focus {
+    outline: none; /* removes the outline on focus */
+    box-shadow: 0 0 5px var(--white); /* adds a shadow to the link on focus */
+}
+/* styles for the radial nav links on visited */
+.radial-nav a:visited {
+    color: var(--white); /* changes the link text color to white on visited */
+}
+/* styles for the radial nav links on active */
+.radial-nav a:active {
+    color: var(--white); /* changes the link text color to white on active */
 }
 
-
+/* styles for the radial nav links on focus */      
+.radial-nav a:focus {
+    outline: none; /* removes the outline on focus */
+    box-shadow: 0 0 5px var(--white); /* adds a shadow to the link on focus */
+}
+/* styles for the radial nav links on visited */
+.radial-nav a:visited {
+    color: var(--white); /* changes the link text color to white on visited */
+}
+/* styles for the radial nav links on active */
+.radial-nav a:active {
+    color: var(--white); /* changes the link text color to white on active */
+}
+/* styles for the radial nav links on focus */          
+.radial-nav a:focus {
+    outline: none; /* removes the outline on focus */
+    box-shadow: 0 0 5px var(--white); /* adds a shadow to the link on focus */
+}
+/* styles for the radial nav links on visited */
+.radial-nav a:visited {
+    color: var(--white); /* changes the link text color to white on visited */
+}
+/* styles for the radial nav links on active */
+.radial-nav a:active {
+    color: var(--white); /* changes the link text color to white on active */
+}   
+/* styles for the radial nav links on focus */              
+.radial-nav a:focus {
+    outline: none; /* removes the outline on focus */
+    box-shadow: 0 0 5px var(--white); /* adds a shadow to the link on focus */
+}
 
 
 
