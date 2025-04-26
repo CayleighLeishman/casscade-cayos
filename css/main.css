@@ -1,0 +1,83 @@
+/* I use this for responsive-design.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+/********************************
+*  responsive-design.html
+*  This is the CSS for the responsive-design.html page.
+*  It is a simple page that shows how the website looks on different screen sizes.
+********************************/
+
+
+/* for headlines */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', sans-serif; 
+}
+
+/* i think thats where the fonts were suppose to go */
+body {
+    font-family: Helvetica, Arial, sans-serif; 
+    color: #333;
+}
+hr, .line{
+    color: #d0d0d0;
+}
+
+/* styles for the Navigation */
+
+/*  :visited pseudo-class is used to style  links that have been clicked on and visited already recently. */
+
+nav a, nav a:visited {
+    font-family: 'Lora', sans-serif;
+    color: #666;
+    text-decoration: none;
+
+}
+
+nav a:active{
+    color: #DEB887;
+    text-decoration: none;
+}
+
+nav a:hover{
+
+    color: #00dfff;
+    font-family: 'Lora', sans-serif;
+}
+
+
+    
+/* Speific tyles for mobile devices */  
+@media (max-width: 268px) {
+    /* Styles for mobile devices */
+    
+    /* for headlines */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', sans-serif; 
+        font-size: 3rem;
+    }
+    
+    /* i think thats where the fonts were suppose to go */
+    body {
+        font-size:2rem;
+        padding: 1rem;
+         color: #333;
+    }
+
+    nav a {
+        display: block;
+        padding: .4rem 0;
+      }
+    
+      /* this was to try to make agnus chase look mrore in the middle of the website instead
+      of to the far right. */
+    figure{
+        margin: 2rem 0 ;
+        padding:.2rem;
+        text-align: center;
+
+    }
+
+
+}
