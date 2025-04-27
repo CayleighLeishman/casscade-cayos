@@ -48,30 +48,84 @@ nav a:hover{
 
     
 /* Speific tyles for mobile devices */  
-@media (max-width: 268px) {
+
+
+
+@media (max-width: 768px) {
     /* Styles for mobile devices */
-    
+
     /* for headlines */
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Lora', sans-serif; 
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
     
     /* i think thats where the fonts were suppose to go */
     body {
-        font-size:2rem;
+        font-size:rem;
         padding: 1rem;
          color: #333;
     }
 
     nav a {
         display: block;
+        margin: 0.5rem 0;
         padding: .4rem 0;
       }
-    
-      /* this was to try to make agnus chase look mrore in the middle of the website instead
+      nav ul {
+        text-align: center;
+    }
+    /* this was to try to make Magnus chase look mrore in the middle of the website instead
       of to the far right. */
-    figure{
+      img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+      figure{
+        margin: 2rem 0 ;
+        padding:.2rem;
+        text-align: center;
+
+    }
+
+
+}
+
+@media (max-width: 268px) {
+    /* Styles for mobile devices */
+
+  
+    
+    /* for headlines */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', sans-serif; 
+        font-size: 1rem;
+    }
+    
+    /* i think thats where the fonts were suppose to go */
+    body {
+        font-size:rem;
+        padding: 1rem;
+         color: #333;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        padding: .4rem 0;
+      }
+      nav ul {
+        text-align: center;
+    }
+    /* this was to try to make Magnus chase look mrore in the middle of the website instead
+      of to the far right. */
+      img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+      figure{
         margin: 2rem 0 ;
         padding:.2rem;
         text-align: center;
