@@ -1,0 +1,126 @@
+May 4 2025:
+
+this is jsut a ramblings of thoughts I have whie debugging to hopefully 
+help me keep on track as well as understanding the code better.
+
+If anyone else does read this, good luck because hopefullly
+bu the time you read this, i will have fixed the issues I had
+but you wont know how to fix the issues you currently have. 
+
+
+anyways:
+
+code
+___
+
+right now O created tjhis because I thought this code was helpful for mobile view
+but I'm now seeig it was kindof redudant (basically "repetetive") because 
+I technically have code that ensures that it fits the screen 
+a particular way.
+
+that beign saoid I always delete code and then regret it. so Here's the code that I had
+
+/* @media (max-width: 600px) {
+    .radial-nav {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choose-your-chaos {
+        position: static;
+        transform: none;
+        margin-bottom: 1.5rem;
+        pointer-events: auto;
+    }
+
+    .radial-nav a {
+        position: static; /* <<< No absolute positioning */
+        transform: none; /* <<< No rotating or weird movement */
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    } */
+
+    
+/* @media (max-width: 600px) {
+    /* .radial-nav {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    .choose-your-chaos {
+        position: static;
+        transform: none;
+        margin-bottom: 1.5rem;
+        pointer-events: auto;
+    }
+
+    .radial-nav a {
+        position: static; 
+        transform: none; 
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+    .radial-nav a:nth-child(2) {
+        transform: rotate(0deg) translate(38%) rotate(-0deg);
+    }
+    .radial-nav a:nth-child(3) {
+        transform: rotate(60deg) translate(38%) rotate(-60deg);
+    }
+    .radial-nav a:nth-child(4) {
+        transform: rotate(120deg) translate(38%) rotate(-120deg);
+    }
+    .radial-nav a:nth-child(5) {
+        transform: rotate(180deg) translate(38%) rotate(-180deg);
+    }
+    .radial-nav a:nth-child(6) {
+        transform: rotate(240deg) translate(38%) rotate(-240deg);
+    }
+    .radial-nav a:nth-child(7) {
+        transform: rotate(300deg) translate(38%) rotate(-300deg);
+    } 
+}*/
+}
+___
+
+I'm not liking how the circle looks. I think I want more texture 
+instead of just a solid color. 
+
+I tjhought of doing a gradient, bu tI have that for the background. 
+
+I also want to creat a button that allows the user to turn off any accessiblility 
+features that are inconvenient for them.
+
+I thimk I'll have it in the lower right corner, but I thought of having it elsewhere.
+that being said its more consistent so I'll have it in the right corener
+
+also, i need to ensure that its functional for mobile. 
+
+
+ayways, the issue I'm going to fix is how the div looks, but I have other assingments that need to take pirority. 
+
+
+I'll try to add a project for selectors and pseudo selectors down the line. 
+
+This repository is a mess, but I think I can make it work.
+mainly because I'm still fairly excited about this page being my 
+"cheat sheet" for CSS to utilize in the futre.
+
+I also want to create different templates, and maybe in the footer (or in the nav
+button) have a button that allows the user to change the template.
+I think that would be a fun project to do, and it would allow for accesibility, as well as a way 
+for people to see differen templates I can do without having to create another "nav"
+because I want the nav go be strictly for the "cheat sheet" information. 
+
+Anyways to the proper project!

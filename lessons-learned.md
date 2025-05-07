@@ -1,7 +1,6 @@
 # Advanced CSS Cheatsheet 
 
-This cheatsheet will help you with your **advanced CSS class** and your 
-**Father's Day website**! It's packed with cool stuff that will make your websites awesome.
+I asked ChatGPT to help me create a **cheatsheet** for CSS, so I can reuse this when I get stuck on a topic or a final project for example. It's packed with cool stuff that will make any websites awesome.
 
 ---
 ##  **Color Formats (HSL / HSLA)**

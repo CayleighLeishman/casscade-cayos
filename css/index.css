@@ -1,17 +1,93 @@
 :root {
     /* Defining color variables */
+    /* for "background: [color]; */
     --blue: #1E90FF; /* Bright blue */
-    --navy-blue: #000080; /* Navy blue */
-    --byui-blue: #003F87; /* BYU-Idaho blue (adjust the shade if needed) */
-    --white: #FFFFFF; /* White */
-}
+    --navy-blue: #3e1034; /* Navy blue */
+    --background-blue: #003F87; /* BYU-Idaho blue (adjust the shade if needed) */
+    --white: #FFFFFF; /* White */ 
+
+    /* for the div color */
+
+    --shadow-color:  0 0 20px rgba(140, 138, 138, 0.5);
+    --hover-color: rgba(255,255,255,0.3);
+
+    /* for background-image: */
+    --splash-light:#fff; /* light color for the splash page */
+    --splash-dark: #000; /* dark color for the splash page */
+
+    --splashblue: #b3ecff;
+    --bubble-highlight: #e0f7ff;
+    --bubble-shadow: #b3ecff; /* light blue color for the bubble shadow */
+    --background-gradient: linear-gradient(
+        to bottom,
+        /*more realisticish
+         #001F3F,  
+        #0074D9,  
+        #00BFFF,  
+        #7FDBFF, 
+        #00BFFF,
+        #0074D9,
+        #001F3F */
+        /* more cartoonish */
+        #00AEEF,  /* Bright cartoon aqua */
+        #1ECBE1,  /* Soft turquoise */
+        #48D1CC,  /* Medium turquoise */
+        #00AEEF
+      );}
 
 body{
-    background-color: var(--byui-blue); 
-    
+   
     color: var(--white); 
     font-family: arial, sans-serif;
+    margin:0;
+    padding:0;
    
+}
+
+/* _____________________________________________
+   
+animation for background of Navigation page
+
+ _____________________________________________*/
+
+ .ocean-wave .splash, .ocean-wave .bubble{
+    position:absolute;
+    bottom:0;
+
+    border-radius: 50%;
+    opacity: 0.7;
+ }
+
+.ocean-wave{
+    /* keep it fixeed at the bottom of the screen */
+    position: fixed;
+    bottom:0;
+    left:0;
+
+    /* i want it to be the full width and cover at  least part of the viewpeort height */
+    width:100%;
+    height: 40Vh; /* viewport height */
+
+    /* use a horizontal gradient as the ocean background */
+    background-image: var(--background-gradient); 
+      background-size: 400% 400%; /* makes the gradient move */
+   
+      /*This is the animation below "called"*/
+    animation: gradientwave 10s ease-in-out infinite;
+    z-index: -1;
+  
+
+}
+@keyframes gradientwave {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
 }
 
 h1{
@@ -20,26 +96,26 @@ h1{
     font-size: 2rem; /* sets the font size of the heading to 2rem */
 }
 
-.radial-nav {
-    background: var(--byui-blue); /* just for reference */
+h3{
+    color: var(--white);
+    font-weight: bold; 
+    font-size: 1.5rem; /* sets the font size of the heading to 2rem */
     
-    position: relative;
-    
-    width: min(90vw, 400px); /* 90% of viewport width, but no bigger than 400px */
-    height: min(90vw, 400px); /* keep it a square */
-    margin: 50px auto;
-
-    border-radius: 75%;
-    box-shadow: 0 0 20px rgba(140, 138, 138, 0.5);
-   
+    background-color: var(--background-blue);
+    padding: 0.5rem 1rem; /* adds padding to the heading */
+    border-radius: 3em; /* rounds the corners of the heading */
+    margin: 0.5rem 0; /* adds margin to the heading */
+    box-shadow: var(--shadow-color); /* adds a shadow to the heading */
 }
+
+
 
 .choose-your-chaos {
     position: absolute;
-
     top: 50%;
     left: 50%;
 
+    /* stuff for text on screen */
     font-size: 1.8rem;
     text-align: center;
 
@@ -47,120 +123,72 @@ h1{
     pointer-events: none; /* so links can still be clicked */
 }
 
+.radial-nav {
+    background: var(--background-blue); /* just for reference */
+    position: relative;
+    
+    width: min(90vw, 400px); /* 90% of viewport width, but no bigger than 400px */
+    height: min(90vw, 400px); /* keep it a square */
+    margin: 50px auto;
+
+    border-radius: 75%;
+    box-shadow: var(--shadow-color);
+   
+}
 .radial-nav a {
-    background: rgba(255,255,255,0.1);
-    border-radius: 1rem;
-     
-    position: absolute;
+    border-radius: 10%;
+    
+    position:absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;     
+    
+    width:3rem;
+    height: 3rem;
 
     top: 50%;
     left: 50%;
 
-    color: white;
+    color: var(--white);
+    text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
 
-    z-index:20;
-
-}
-
-.radial-nav a:nth-child(2) {
-    transform: rotate(0deg) translate(150px) rotate(-0deg);
-}
-.radial-nav a:nth-child(3) {
-    transform: rotate(60deg) translate(150px) rotate(-60deg);
-}
-.radial-nav a:nth-child(4) {
-    transform: rotate(120deg) translate(150px) rotate(-120deg);
-}
-.radial-nav a:nth-child(5) {
-    transform: rotate(180deg) translate(150px) rotate(-180deg);
-}
-.radial-nav a:nth-child(6) {
-    transform: rotate(240deg) translate(150px) rotate(-240deg);
-}
-.radial-nav a:nth-child(7) {
-    transform: rotate(300deg) translate(150px) rotate(-300deg);
 }
 
 .radial-nav a:hover {
-    background: rgba(255,255,255,0.3);
+    background: var(--hover-color);
     font-size: 1.3rem; /* increases the font size on hover */
 }
 
-
-@media (max-width: 600px) {
-    .radial-nav {
-        width: 90%;
-        height: auto;
-        padding: 2rem;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .choose-your-chaos {
-        position: static;
-        transform: none;
-        margin-bottom: 1.5rem;
-        pointer-events: auto;
-    }
-
-    .radial-nav a {
-        position: static; /* <<< No absolute positioning */
-        transform: none; /* <<< No rotating or weird movement */
-        width: 100%;
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-    }
-
-    
-@media (max-width: 600px) {
-    .radial-nav {
-        width: 90%;
-        height: auto;
-        padding: 2rem;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .choose-your-chaos {
-        position: static;
-        transform: none;
-        margin-bottom: 1.5rem;
-        pointer-events: auto;
-    }
-
-    .radial-nav a {
-        position: static; /* <<< No absolute positioning */
-        transform: none; /* <<< No rotating or weird movement */
-        width: 100%;
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-    }
-    .radial-nav a:nth-child(2) {
-        transform: rotate(0deg) translate(38%) rotate(-0deg);
-    }
-    .radial-nav a:nth-child(3) {
-        transform: rotate(60deg) translate(38%) rotate(-60deg);
-    }
-    .radial-nav a:nth-child(4) {
-        transform: rotate(120deg) translate(38%) rotate(-120deg);
-    }
-    .radial-nav a:nth-child(5) {
-        transform: rotate(180deg) translate(38%) rotate(-180deg);
-    }
-    .radial-nav a:nth-child(6) {
-        transform: rotate(240deg) translate(38%) rotate(-240deg);
-    }
-    .radial-nav a:nth-child(7) {
-        transform: rotate(300deg) translate(38%) rotate(-300deg);
-    }
+.radial-nav a:nth-child(2) {
+    transform: rotate(0deg) translate(100px) rotate(-0deg);
 }
+.radial-nav a:nth-child(3) {
+    transform: rotate(60deg) translate(100px) rotate(-60deg);
+}
+.radial-nav a:nth-child(4) {
+    transform: rotate(120deg) translate(100px) rotate(-120deg);
+}
+.radial-nav a:nth-child(5) {
+    transform: rotate(180deg) translate(100px) rotate(-180deg);
+}
+.radial-nav a:nth-child(6) {
+    transform: rotate(240deg) translate(100px) rotate(-240deg);
+}
+.radial-nav a:nth-child(7) {
+    transform: rotate(300deg) translate(100px) rotate(-300deg);
+}
+
+
+/* If someone is on a device that is smaller than  500px */
+@media only screen and (min-width: 300px){
+    .radial-nav {
+
+        width:45%; 
+        height:80vw; /* 80% of viewport width */
+        margin: 20px auto;
+      
+    }
+    
 }

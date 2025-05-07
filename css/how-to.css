@@ -1,0 +1,21 @@
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #d3d3d3; /* light gray */
+    border-radius: 0 0 0.75rem 0.75rem; /* assuming rounded-b-xl is 12px */
+    margin: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* flat shadow */
+    width: var(--window-width);
+    height: var(--window-height);
+  }
+  
+  .dark .container {
+    background-color: var(--color-secondary-dark);
+    border-color: black;
+  }
