@@ -1,3 +1,51 @@
+
+May 17, 2025
+
+I'm going to add what CUBE CSS is so that i can learn exactly what it entails, so tha twill be another section for my navigation. 
+
+I know the navigation is ortodox, and it's kindof meant to be. I would never use this for a real site, unless
+a client really really wanted it. But i would try to encourage fo rsome consistency. To whoever is reading this,
+I hope you understand that this is a "cheat sheet" for me to learn CSS and to have a place to put all the things I learn.
+This is not meant to be a "real" site, but more of a place for me to act liek it's a sandbox, hense the home page of a beach in the sand.
+
+I need to figure out hwo to make the top part look sandy. 
+
+but righ tnow I need to get going on explaining CUBE CSS!
+
+I also realized I put a lot of the content in the .md file an dnot an html, which is a decision I disagree with now. But that's all in a day 
+of the learning process! 
+
+___________________________________
+May 15
+
+Boy I have not touched this in a hot minute.
+
+So I'm looking to figute out what I wan tto do with the main page. (The index or home page) 
+
+I'm also tryign to learn how to use figma. I'm trying to design the pages there so I can 
+have a clear representative of how I want it to turn out. I'm also doing it because at least one 
+job posting for web development that I've seen requires figma. And if I want to 
+go into ux desing/research then I'll need to understand how to use figma. 
+
+
+
+
+
+___________________________________
+May 7th
+
+I didnt do much today but I saw some patterns 
+
+```css
+background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+```
+this creates a lineed effect like looking at lined paper.
+
+
 May 4 2025:
 
 this is jsut a ramblings of thoughts I have whie debugging to hopefully 
@@ -124,3 +172,4 @@ for people to see differen templates I can do without having to create another "
 because I want the nav go be strictly for the "cheat sheet" information. 
 
 Anyways to the proper project!
+

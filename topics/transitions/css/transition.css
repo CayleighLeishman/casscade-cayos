@@ -1,0 +1,83 @@
+  :root {
+      --pink: #ff00b4;
+      --purple: #6d1251;
+      --light-yellow: #ffff66;
+      --black: #1e1e1e;
+      --white: #fff;
+
+      --green-text:#33ff33;
+    }
+  /* code block styling - dark background with green text */
+    pre {
+      background-color: var(--black);   /* dark background */
+      color: var(--green-text) ;              /* green text */
+      padding: 1em;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: pre-wrap;      /* keep indentation and line breaks */
+      margin-top: 2rem;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: var(--white);
+      color: var(--black);
+    }
+    /* Base styles for both buttons */
+    .wishButton0, .wishButton1, .wishButton2 {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: var(--white);
+      display: inline-block;
+      user-select: none;
+      outline: none;
+    }
+
+    /* wishButton0: hover only - instant change */
+    .wishButton0 {
+      background-color: var(--purple);
+    }
+
+    .wishButton0:hover {
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(1.1);
+    }
+
+    /* wishButton1: hover + transition - smooth change */
+    .wishButton1 {
+      background-color: var(--purple);
+      transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    }
+
+    .wishButton1:hover {
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(1.1);
+    }
+
+    .wishButton2{
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(1.1);
+    }
+
+    .wishButton2:hover {
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(4);
+    }

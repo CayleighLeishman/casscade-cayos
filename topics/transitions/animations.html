@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WAnimation, and Transition</title>
+
+  <link rel="stylesheet" href="css/transition.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    :root {
+      --pink: #ff00b4;
+      --purple: #6d1251;
+      --light-yellow: #ffff66;
+      --black: #1e1e1e;
+      --white: #fff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    button {
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: var(--white);
+      display: inline-block;
+      user-select: none;
+      outline: none;
+    }
+
+    .wishButton0, .wishButton1, .wishButton2 {
+      background-color: var(--purple);
+      color: var(--white);
+    }
+
+    .wishButton0:hover {
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(1.1);
+    }
+
+    .wishButton1 {
+      transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+    }
+
+    .wishButton1:hover {
+      background-color: var(--light-yellow);
+      color: var(--black);
+      box-shadow: 0 0 15px var(--light-yellow);
+      transform: scale(1.1);
+    }
+
+    .wishButton2 {
+      transition: transform 0.8s ease;
+    }
+
+    .wishButton2:hover {
+      transform: scale(4);
+    }
+
+    pre {
+      background-color: var(--black);
+      color: #33ff33;
+      padding: 1em;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Compare your buttons:</h2>
+
+  <p>First Cayleigh, let’s show what you usually use:</p>
+  <button class="wishButton0">wishButton0 – hover only</button>
+
+  <pre><code>
+/* wishButton0 – hover only (changes instantly) */
+.wishButton0:hover {
+  background-color: var(--light-yellow);
+  color: black;
+  box-shadow: 0 0 15px var(--light-yellow);
+  transform: scale(1.1);
+}
+  </code></pre>
+
+  <p>This isn’t “wrong,” but it changes really fast. It might not feel right for everything.</p>
+
+  <p>Okay, now here’s the version where you hover... but this time it **transitions** to the new color
+     and shape instead of Switching like a light switch!</p>
+  <button class="wishButton1">wishButton1 – hover + transition</button>
+
+  <pre><code>
+/* wishButton1 – smooth transition on hover */
+.wishButton1 {
+  transition:
+    background-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+
+.wishButton1:hover {
+  background-color: var(--light-yellow);
+  color: black;
+  box-shadow: 0 0 15px var(--light-yellow);
+  transform: scale(1.1);
+}
+  </code></pre>
+
+  <p>Now Cayleigh, let’s get even fancier. What if you wanted something to **grow a LOT** when hovered... and do it **slowly**?</p>
+
+  <button class="wishButton2">wishButton2 – dramatic hover scale</button>
+
+  <pre><code>
+/* wishButton2 – smoother, slower scaling */
+.wishButton2 {
+  transition: transform 0.8s ease;
+}
+
+.wishButton2:hover {
+  transform: scale(4);  /* 👀 yep, this is what's different */
+}
+  </code></pre>
+
+</body>
+</html>

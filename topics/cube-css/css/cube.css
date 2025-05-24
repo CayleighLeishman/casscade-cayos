@@ -1,0 +1,110 @@
+:root {
+    --letter-color: #4A90E2;
+    --black: #000;
+    --elsa: white;
+}
+
+/* ==============================
+General Styles for Body and Main
+================================== */
+body {
+    color: var(--elsa); 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black); /* Background color */
+}
+
+main {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--letter-color); /* Text color for main content */
+}
+
+/* ==============================
+Header Cube (Spinning Animation)
+================================== */
+
+/* Header Cube that Spins */
+.header-cube {
+    transform-style: preserve-3d;
+    animation: spin 6s infinite linear; /* Spinning animation */
+    cursor: pointer; /* Show pointer cursor to indicate it's clickable */
+}
+
+/* Cube faces with same size */
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--letter-color);
+    color: var(--elsa);
+    font-size: 2rem;
+    font-weight: bold;
+   
+    line-height: 100px; /* Centers the text */
+    border: 2px solid var(--elsa);
+}
+
+/* Position each face in 3D space */
+.front  { transform: rotateY(  0deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.right  { transform: rotateY( 90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX( 90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+/* Keyframe for Spinning Animation */
+@keyframes spin {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* ==============================
+Interactive Cube (No Spinning, Drag-Only)
+================================== */
+
+/* Interactive Cube: No spin, only rotates when dragged */
+.interactive-cube {
+    transition: transform 0.1s ease-out; /* Smooth rotation */
+    cursor: grab; /* Show grab cursor when user is about to drag */
+    transform-style: preserve-3d; /* Necessary for 3D transforms */
+}
+
+/* Position each face in 3D space with the interactive cube */
+.interactive-front  { transform: rotateY(  0deg) translateZ(75px); }
+.interactive-back   { transform: rotateY(180deg) translateZ(75px); }
+.interactive-right  { transform: rotateY( 90deg) translateZ(75px); }
+.interactive-left   { transform: rotateY(-90deg) translateZ(75px); }
+.interactive-top    { transform: rotateX( 90deg) translateZ(75px); }
+.interactive-bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+/* ==============================
+Face Content Styling (Text for Faces)
+================================== */
+
+/* Styling for the content inside each cube face */
+.face-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.face-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #f8fafc; /* White color for header */
+}
+
+.face-content p {
+    font-size: 0.9rem;
+    color: var(--elsa); /* Text color */
+    line-height: 1.4;
+    margin: 0;
+}
+.face-content a {
+    color: var(--letter-color); /* Link color */
+    text-decoration: none;
+}
