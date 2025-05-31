@@ -1,0 +1,42 @@
+body{
+    background-color: coral;
+}
+
+.card-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:3rem;
+    
+}
+
+/* Horizontal Layout _____ */
+row-grid{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+/* vertical Layout ╽ */
+.col-grid{
+  flex-direction: column;
+  align-items: center; /* try: flex-start, flex-end */
+  gap: 10px;
+}
+/* both horizontal and vertical work */
+.row-grid, .col-grid{
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width:500px;
+
+    text-align: center;
+    background-color: white;
+}
+
+.row-grid img, 
+.col-grid img {
+  width: 100%;
+  display: block;
+}
+
+
+
