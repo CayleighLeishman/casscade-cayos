@@ -145,11 +145,59 @@
          name with <strong>BEM</strong>
      </p>
          
-
+     </div>
      <div class="grey-box">
     <p>This is the grey box content on the right side 
         in desktop view, but above on small screens.</p>
   </div>
   </div>
+
+  <div class="shopping-cart">
+    <div class="shopping-cart-badge">3</div>
+  <h1 class="shopping-cart-heading">Shopping Cart</h1>
+  <h1>Shopping Cart</h1>
+
+  <div class="products">
+    <div class="product">
+      <p class="product__title">
+        Product Name   
+      </p>
+      <p class="product__price">
+        $12
+    </p>
+    </div>
+    <div class="product" >
+      <p class="product__title">
+        Second product
+      </p>
+      <p class="product__price">
+        $8
+    </p>
+    </div>
+    <div class="product">
+      <p class="product__title">
+        third product
+    </p>
+      <p class="product__price">
+       $5
+    </p>
+    </div>
+  </div>
+
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+
+    <div class="promo">
+      <label for="promo-input">Promo Code</label>
+      <input type="text" id="promo-input" placeholder="Enter code">
+      <button onclick="applyPromo()">Apply</button>
+      <p id="promo-message" class="promo__message"></p>
+    </div>
+
+    <p id="cart-total" class="total">Total: $25</p>
+  </div>
+</div>
+
 </body>
 </html>
