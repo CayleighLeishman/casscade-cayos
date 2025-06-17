@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture and Component Based Design</title>
+
+    <!-- css -->
+     <link rel="stylesheet" href="styles/andc.css">
+     <link rel="stylesheet" href="styles/article.css">
+</head>
+<body>
+
+  <div class="post">
+    <div class="article">
+      <h2>What Is CSS Architecture?</h2>
+      <p>Let's say you were the type of person to say
+         <em>"I’m gonna build a castle! It’ll have a tower,
+             a slide, and a secret treasure room!"</em></p>
+
+      <p>That’s architecture — it’s the big plan in your
+         head. It tells you what parts you need, how they
+          work together, and where they go. You’re
+           organizing your dream!</p>
+      <p>In websites, this means planning:</p>
+
+      <ul>
+        <li>What pages or parts you’ll have (home, about, contact)</li>
+        <li>How the pages connect</li>
+        <li>What each part does (header, card, footer, etc.)</li>
+      </ul>
+
+      <p>Think of CSS architecture like building with 
+        LEGOs. If you throw all the pieces in one big pile,
+         it gets messy real fast. But if you sort your
+          bricks by color and shape, you can build castles
+           without everything falling apart. CSS 
+           architecture is just a fancy way of saying,
+            “Let’s keep our styles neat and tidy!”</p>
+
+      <pre class="code"><code>/* CSS architecture = organize
+        d style rules */
+        .header { color: blue; }
+        .footer { background: pink; }</code></pre>
+
+    </div>
+     <div class="grey-box">
+        <nav>
+            <ul>
+                 <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="article">
+      <h2>What Are Components?</h2>
+      <p>Components are like little sections on a website 
+        that you can reuse again and again. Imagine a header
+         that shows a preview of an article — that’s a
+          component! You can put it anywhere you want on 
+          your site.
+        </p>
+      <p>Each component has its own picture, title, and
+         button, but they all follow the same rules so they 
+         look and work the same.
+        </p>
+      <p>The best part? When you change a component once,
+         it changes everywhere it’s used on the website — 
+         so you don’t have to fix it in lots of places! It’s
+          like magic that keeps your site neat and easy to 
+          update.
+        </p>
+     
+      <pre class="code"><code>&lt;section class="summary"&gt;
+  &lt;img class="summary__img" /&gt;
+  &lt;div class="summary__content"&gt;
+    &lt;h2 class="summary__title"&gt;Hello World!&lt;/h2&gt;
+    &lt;p class="summary__lead"&gt;This is a summary card.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+     <div class="grey-box">
+    <p>This is the grey box content on the right side in 
+        desktop view, but above on small screens.</p>
+  </div>
+  </div>
+
+  <div class="post">
+    <div class="article">
+      <h2>Meet BEM: The Naming Superhero</h2>
+      <p>BEM is a super helpful way to name your classes. 
+        It stands for:</p>
+      <ul>
+        <li><strong>Block</strong> – the big thing 
+            (like a card)</li>
+        <li><strong>Element</strong> – little parts
+             of the big thing (like the title inside 
+             the card)</li>
+        <li><strong>Modifier</strong> – a twist! 
+            (like a bigger or fancier card)</li>
+      </ul>
+
+      <p>So instead of calling everything “box” or
+         “header2,” you give names that make sense!
+          It’s like labeling your  bins so you 
+          know where the envelopes go compared to the 
+          pens.</p>
+    </div>
+
+     <div class="grey-box">
+    <p>This is the grey box content on the right side 
+        in desktop view, but above on small screens.</p>
+  </div>
+  </div>
+
+  <div class="post">
+    <div class="article">
+      <h2>Why Should You Care?</h2>
+      <p>When you use BEM and components, your code 
+        becomes:</p>
+      <ul>
+        <li>Easy to read</li>
+        <li>Super reusable</li>
+        <li>Protected from random styling accidents</li>
+      </ul>
+      <pre class="code"><code>.summary__title {
+  font-size: 1.2rem;
+  color: #333;
+}</code></pre>
+    </div>
+     <div class="grey-box">
+    <p>This is the grey box content on the right side
+         in desktop view, but above on small screens.</p>
+  </div>
+  </div>
+
+
+  <div class="post">
+    <div class="article">
+      <h2>Conclusion</h2>
+      <p>So remember: break your page into
+         <strong>blocks</strong>, and give each part a 
+         name with <strong>BEM</strong>
+     </p>
+         
+
+     <div class="grey-box">
+    <p>This is the grey box content on the right side 
+        in desktop view, but above on small screens.</p>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,4 +1,10 @@
+june 16
 
+since i last updated this I've kindof realized that i hadn'tw orked on my debugging txt files/ 
+
+so heres my update for the day
+i tried to write the archetect and component page, but then realized i was going to need a lot more sections for my circle navigation. It'll take awile but I['m sure it;ll be worth it in the end
+for now im just going to focus on concepts I need to learn in class and use that to help futher my cheetsheet so i know what I'm stuck with ]
 June 7 2025
 
 apparently I haven;'t done it in a While

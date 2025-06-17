@@ -1,0 +1,29 @@
+.post {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .article {
+    flex: 2;
+    background: #f9f9f9;
+    padding: 15px;
+  }
+
+  .grey-box {
+    flex: 1;
+    background: #ccc;
+    padding: 15px;
+  }
+
+  /* Responsive: stack vertically on small screens */
+  @media (max-width: 600px) {
+    .post {
+      flex-direction: column;
+    }
+    /* grey box on top */
+    .grey-box {
+      order: -1;
+    }
+  }
