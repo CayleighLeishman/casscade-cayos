@@ -122,62 +122,121 @@ h3{
     transform: translate(-50%, -50%);
     pointer-events: none; /* so links can still be clicked */
 }
-
-.radial-nav {
-    background: var(--background-blue); /* just for reference */
-    position: relative;
-    
-    width: min(90vw, 400px); /* 90% of viewport width, but no bigger than 400px */
-    height: min(90vw, 400px); /* keep it a square */
-    margin: 50px auto;
-
-    border-radius: 75%;
-    box-shadow: var(--shadow-color);
-   
-}
-.radial-nav a {
-    border-radius: 10%;
-    
-    position:absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;     
-    
-    width:3rem;
-    height: 3rem;
-
-    top: 50%;
-    left: 50%;
-
-    color: var(--white);
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-
+/* Navigation container */
+.volleyball-nav {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 2rem auto;
+  background: conic-gradient(
+    #ff7f11 0deg 60deg,
+    #fff 60deg 120deg,
+    #ff7f11 120deg 180deg,
+    #fff 180deg 240deg,
+    #ff7f11 240deg 300deg,
+    #fff 300deg 360deg
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.radial-nav a:hover {
-    background: var(--hover-color);
-    font-size: 1.3rem; /* increases the font size on hover */
+/* Center volleyball icon */
+.volleyball-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 12px #ccc;
+  z-index: 10;
 }
 
-.radial-nav a:nth-child(2) {
-    transform: rotate(0deg) translate(100px) rotate(-0deg);
+.volleyball-icon::before,
+.volleyball-icon::after {
+  content: "";
+  position: absolute;
+  background: #004e89;
+  border-radius: 50%;
 }
-.radial-nav a:nth-child(3) {
-    transform: rotate(60deg) translate(100px) rotate(-60deg);
+
+.volleyball-icon::before {
+  width: 8px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.radial-nav a:nth-child(4) {
-    transform: rotate(120deg) translate(100px) rotate(-120deg);
+
+.volleyball-icon::after {
+  width: 100%;
+  height: 8px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
-.radial-nav a:nth-child(5) {
-    transform: rotate(180deg) translate(100px) rotate(-180deg);
+
+/* Nav links container */
+.nav-links {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.radial-nav a:nth-child(6) {
-    transform: rotate(240deg) translate(100px) rotate(-240deg);
+
+/* Each nav link positioned around the circle on wedges */
+.nav-links li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
 }
-.radial-nav a:nth-child(7) {
-    transform: rotate(300deg) translate(100px) rotate(-300deg);
+
+/* Nav link style */
+.nav-links li a {
+  display: block;
+  background: #0077c8;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover highlight */
+.nav-links li a:hover {
+  background-color: #ff7f11;
+  color: #004e89;
+  box-shadow: 0 4px 12px rgba(255,127,17,0.7);
+}
+
+/* Position each link on its volleyball wedge with rotation */
+/* 6 panels, so 360/6 = 60 degrees apart */
+
+.nav-links li:nth-child(1) {
+  transform: rotate(30deg) translate(140px) rotate(-30deg);
+}
+.nav-links li:nth-child(2) {
+  transform: rotate(90deg) translate(140px) rotate(-90deg);
+}
+.nav-links li:nth-child(3) {
+  transform: rotate(150deg) translate(140px) rotate(-150deg);
+}
+.nav-links li:nth-child(4) {
+  transform: rotate(210deg) translate(140px) rotate(-210deg);
+}
+.nav-links li:nth-child(5) {
+  transform: rotate(270deg) translate(140px) rotate(-270deg);
+}
+.nav-links li:nth-child(6) {
+  transform: rotate(330deg) translate(140px) rotate(-330deg);
 }
 
 

@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --sidebar-bg: #4CAF50;
+  --sidebar-text: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*All Grid Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--secondary-color);
+  align-items: start;
+}
+
+/* Different section widths */
+.thin-grid {
+  grid-template-columns: 1fr minmax(auto, 500px) 1fr;
+  min-height: 200px;
+}
+
+.medium-grid {
+  grid-template-columns: 1fr minmax(auto, 700px) 300px;
+  min-height: 350px;
+}
+
+.wide-grid {
+  grid-template-columns: 300px minmax(auto, 1000px) 1fr;
+  min-height: 500px;
+}
+
+/* Main content */
+.blog-post {
+  grid-column: 2;
+}
+
+/* Sidebars */
+.sidebar-left {
+  grid-column: 1;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.sidebar-right {
+  grid-column: 3;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Full bleed image in wide layout */
+.full-bleed-image {
+  grid-column: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-bleed-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Header and footer */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--text-color);
+  color: var(--secondary-color);
+}
+
+.site-header h1,
+.site-footer p {
+  margin: 0;
+}
+
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 568px) {
+ 
+  /* Stack all grid items vertically */
+  .thin-grid,
+  .medium-grid,
+  .wide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post,
+  .sidebar-left,
+  .sidebar-right,
+  .full-bleed-image {
+    grid-column: 1 !important;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    order: -1; 
+  }
+
+  .full-bleed-image img {
+    border-radius: 5px;
+  }
+}
