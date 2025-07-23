@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title></title>
+
+</head>
+
+<style>
+    /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@500&family=Fira+Code:wght@500&family=Lato:wght@300&family=Raleway:wght@600&family=Merriweather:ital@1&display=swap');
+
+/* Base Body Typography */
+    body {
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      padding: .8rem 18rem .8rem 18rem;
+    }
+     
+    /* Header Typography */
+    .large-header {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    margin-bottom: 2rem;
+    text-align: center;
+    }
+
+    /* H1 - Elegant Serif */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    /* H2 - Clean Sans-Serif */
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #2b2b2b;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    /* H3 - Monospace Code Style */
+    h3 {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 0.75rem;
+    }
+
+    /* H4 - Light and Modern */
+    h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #555;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* H5 - Sharp Sans-Serif */
+    h5 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #666;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* H6 - Soft Italic Serif */
+    h6 {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+
+ </style>
+ 
+ <body>
+   <main>
+    <h3 class="large-header">Web Typography: Linux File Management and Installation</h3>
+     <section>
+   <h1>Installing Custom Applications</h1>
+   <p>
+     For example, say your developers have come up with the perfect amortization program and you want to install it on the workgroup server for other systems to remotely mount and use. Because this is a third-party or custom application, the logical place for it is in <code>/usr/local/appname</code>, possibly with a link to the program binary in the <code>/usr/local/bin</code> directory (because that's in the path).
+   </p>
+   <aside>
+     <strong>Alert:</strong> If given a choice between putting the software package <code>bigprog</code> in the <code>/usr/local/bigprog</code> section and the <code>/opt/bigprog</code> section, it's hard to choose. Read any relevant exam question closely — the main difference is that the <code>/opt</code> section is not considered to be shareable, whereas the <code>/usr</code> section is often shared and mounted by client systems.
+   </aside>
+ </section>
+ <section>
+   <h2>File Management Commands</h2>
+   <p>
+     A major section of the 101 exam is dedicated to how to run commands properly with the right options and arguments. As a good sysadmin, you'll be expected to know how to create, delete, edit, set permissions on, display, move, copy, and determine the type of files and programs.
+   </p>
+   <aside>
+     <strong>Alert:</strong> You must be able to pick proper and working commands out of lists of possibilities, type in appropriate strings in fill-in-the-blank boxes, and in general show that you've run the programs and utilities in question.
+   </aside>
+ </section>
+ <section>
+   <h2>Tips for Working with Linux Files</h2>
+   <ul>
+     <li>
+       <strong>Hidden files aren't really hidden</strong> — They just begin with a <code>.</code>, such as the <code>.bashrc</code> and <code>.bash_profile</code> files. These are not viewable by normal users with conventional commands and switches and aren't deleted by commands such as <code>rm -f *.*</code>.
+     </li>
+     <li>
+       <strong>Filenames can contain multiple periods or no periods at all</strong> — The filenames <code>this.is.a.long.file</code> and <code>thisisalongfile</code> are perfectly reasonable and valid.
+     </li>
+     <li>
+       <strong>Spaces in filenames look nice, but are a pain to type</strong> — Use an <code>_</code> or a <code>-</code> instead of spaces because it's neater and easier than prefixing all spaces with a backslash (<code>\</code>).
+     </li>
+   </ul>
+ </section>
+  </main>
+</body>
+</html>

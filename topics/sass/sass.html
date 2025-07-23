@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Benefits of SASS/SCSS</title>
+
+  <link rel="stylesheet" href="sass.css">
+</head>
+<body>
+    
+ <h1>What’s SASS (or SCSS) Actually Good For?</h1>
+  <p>SASS is like giving CSS a serious upgrade. SCSS is the version of SASS that plays nice
+     with regular CSS. It’s a lifesaver when your project starts getting big or messy, and 
+     it just helps you write cleaner, smarter styles.</p>
+
+  <h2>Why Bother With SASS/SCSS?</h2>
+  <ul>
+    <li><strong>Variables:</strong>
+      <ul>
+        <li>You can save stuff like colors, spacing, or font sizes and reuse them everywhere.
+             No more hunting for hex codes!</li>
+        <li>Example: <code>$primary-color: #ff7f11;</code></li>
+      </ul>
+    </li>
+    <li><strong>Nesting:</strong>
+      <ul>
+        <li>It lets you group styles together the way your HTML is structured. Way more readable
+             and organized.</li>
+      </ul>
+    </li>
+    <li><strong>Mixins:</strong>
+      <ul>
+        <li>Think of these like reusable style snippets. Handy for stuff like centering 
+            things or adding shadows.</li>
+        <li>Example: <code>@mixin center-flex { display: flex; justify-content: center; 
+            align-items: center; }</code></li>
+      </ul>
+    </li>
+    <li><strong>Math & Logic:</strong> It can do calculations like <code>360deg / 7</code> 
+        if you’re building something like a volleyball nav with 7 slices. Saves you time 
+        (and a calculator).</li>
+    <li><strong>Partials & Imports:</strong> Break your CSS into smaller files and import
+         them into one big one. It helps keep everything way more organized.</li>
+    <li><strong>Built-in Functions:</strong> You can lighten/darken colors, mess with text, 
+        convert units, and more with built-in helpers.</li>
+    <li><strong>Cleaner Code:</strong> You write less, repeat less, and things just feel 
+        more polished.</li>
+  </ul>
+
+  <h2>When It’s Worth Using:</h2>
+  <ul>
+    <li>Your project is getting bigger and needs structure.</li>
+    <li>You want reusable styles or you’re making a design system.</li>
+    <li>You’re working with others and want clean, maintainable code.</li>
+  </ul>
+
+  <h2>When You Might Skip It:</h2>
+  <ul>
+    <li>It’s a tiny project or quick one-off page.</li>
+    <li>You don’t want to mess with extra setup or build tools.</li>
+    <li>Your environment doesn’t support preprocessors at all.</li>
+  </ul>
+
+  <h2>Wrap-Up:</h2>
+  <p>If you're already comfortable with CSS but want things to be easier, more flexible, 
+    and less repetitive—SASS can really help. It's not magic, but it definitely makes
+     organizing styles (and reusing them) feel way smoother—especially when you're building 
+     creative layouts like volleyball navs or any page with a lot going on.</p>
+</body>
+
+</html>

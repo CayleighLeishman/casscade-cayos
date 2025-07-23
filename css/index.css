@@ -143,40 +143,7 @@ h3{
   align-items: center;
 }
 
-/* Center volleyball icon */
-.volleyball-icon {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: inset 0 0 12px #ccc;
-  z-index: 10;
-}
 
-.volleyball-icon::before,
-.volleyball-icon::after {
-  content: "";
-  position: absolute;
-  background: #004e89;
-  border-radius: 50%;
-}
-
-.volleyball-icon::before {
-  width: 8px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.volleyball-icon::after {
-  width: 100%;
-  height: 8px;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
 
 /* Nav links container */
 .nav-links {
